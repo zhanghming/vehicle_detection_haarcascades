@@ -35,7 +35,7 @@ int main(int argc, char** argv)
 
   assert(cascade && storage && capture);
 
-  cvNamedWindow("video", 1);
+  cvNamedWindow("video", CV_WINDOW_NORMAL);
 
   IplImage* frame1 = cvQueryFrame(capture);
   frame = cvCreateImage(cvSize((int)((frame1->width*input_resize_percent)/100) , (int)((frame1->height*input_resize_percent)/100)), frame1->depth, frame1->nChannels);
